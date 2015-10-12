@@ -1,0 +1,11 @@
+<div class="form-group form-control">
+  <%= form_for @idea, remote: true do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :body %>
+      <%= f.text_field :body %>
+
+      <%= f.submit "Submit", id: "submit-button" %>
+  <% end %>
+</div>

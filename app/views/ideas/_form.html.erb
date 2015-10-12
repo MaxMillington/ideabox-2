@@ -1,0 +1,14 @@
+<div class="idea-form">
+
+  <%= form_for @idea do |f| %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-field', placeholder: "New Idea Title" %><br>
+
+      <%= f.label :body %>
+      <%= f.text_area :body, class: 'form-field', placeholder: "New Idea body" %><br>
+
+      <%= f.submit "Save", class: 'btn btn-primary' %>
+  <% end %>
+
+</div>
