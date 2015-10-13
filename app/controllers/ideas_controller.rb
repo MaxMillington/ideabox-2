@@ -7,6 +7,11 @@ class IdeasController < ApplicationController
     @idea = Idea.new
   end
 
+  def monkey
+    @ideas = Idea.order("created_at DESC" && "updated_at DESC")
+    @idea = Idea.new
+  end
+
   def new
   end
 

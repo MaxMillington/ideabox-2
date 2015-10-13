@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+<head class="monkey-title">
+    <meta charset="utf-8">
+    <title>IdeaBox 2.0</title>
+</head>
+
+<body class="monkey">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="monkey-title col-sm-8">
+            <h1>IdeaBox 2.0</h1>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="individual-monkeys col-sm-4">
+            <h3>Most Recent Ideas</h3>
+            <div id="latest-posts">
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <button id="fetch-button"
+                    name="button-fetch"
+                    class="btn btn-default pull-right">Fetch Posts</button>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <hr>
+          <h1 class="new-idea-header individual-monkeys"> Enter a New Idea:</h1>
+            <div class="form-group">
+              <%= form_for @idea do |f| %>
+                  <%= f.label :title %>
+                  <%= f.text_field :title, class: 'form-control', id: 'post-description', placeholder: "New Idea Title" %><br>
+
+                  <%= f.label :body %>
+                  <%= f.text_area :body, class: 'form-control', id: 'post-description', placeholder: "New Idea body" %><br>
+
+                  <%= f.submit "Create Idea", class: 'btn btn-default pull-right',
+                  id: 'create-post' %>
+              <% end %>
+
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/stylesheets/birdeck.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="assets/javascripts/birdeck.js"></script>
+</body>
+</html>
