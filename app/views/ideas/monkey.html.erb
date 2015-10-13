@@ -23,11 +23,11 @@
             <div id="latest-posts">
             </div>
         </div>
-        <div class="col-sm-4">
-            <button id="fetch-button"
-                    name="button-fetch"
-                    class="btn btn-default pull-right">Fetch Posts</button>
-        </div>
+        <!--<div class="col-sm-4">-->
+            <!--<button id="fetch-button"-->
+                    <!--name="button-fetch"-->
+                    <!--class="btn btn-default pull-right">Fetch Posts</button>-->
+        <!--</div>-->
         <div class="col-sm-2"></div>
     </div>
 
@@ -37,16 +37,16 @@
             <hr>
           <h1 class="new-idea-header individual-monkeys"> Enter a New Idea:</h1>
             <div class="form-group">
-              <%= form_for @idea do |f| %>
-                  <%= f.label :title %>
-                  <%= f.text_field :title, class: 'form-control', id: 'post-description', placeholder: "New Idea Title" %><br>
+              <%#= form_for @idea do |f| %>
+                  <%#= f.label :title, class: 'individual-monkeys' %>
+                  <%#= f.text_field :title, class: 'form-control', id: 'post-description', placeholder: "New Idea Title" %><br>
 
-                  <%= f.label :body %>
-                  <%= f.text_area :body, class: 'form-control', id: 'post-description', placeholder: "New Idea body" %><br>
+                  <%#= f.label :body, class: 'individual-monkeys' %>
+                  <%#= f.text_area :body, class: 'form-control', id: 'post-description', placeholder: "New Idea body" %><br>
 
-                  <%= f.submit "Create Idea", class: 'btn btn-default pull-right',
+                  <%#= f.submit "Create Idea", class: 'btn btn-default pull-right',
                   id: 'create-post' %>
-              <% end %>
+              <%# end %>
 
             </div>
         </div>
@@ -55,9 +55,9 @@
 </div>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/stylesheets/birdeck.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<!--<link rel="stylesheet" href="app/assets/stylesheets/idea.css" type="text/css" media="screen" title="no title" charset="utf-8">-->
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="assets/javascripts/birdeck.js"></script>
+<!--<script src="app/assets/javascripts/idea.js"></script>-->
 </body>
 </html>

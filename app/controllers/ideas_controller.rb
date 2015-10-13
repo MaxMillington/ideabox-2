@@ -8,6 +8,7 @@ class IdeasController < ApplicationController
   end
 
   def monkey
+    respond_with Idea.all
     @ideas = Idea.order("created_at DESC" && "updated_at DESC")
     @idea = Idea.new
   end
@@ -35,6 +36,7 @@ class IdeasController < ApplicationController
   end
 
   def update
+    # respond_with Idea.update(params[:id], idea_params)
     if @idea.update_attributes(idea_params)
       redirect_to root_path, notice: 'Idea was successfully updated.'
     else
@@ -45,6 +47,7 @@ class IdeasController < ApplicationController
   end
 
   def destroy
+    # respond_with Idea.destroy(params[:id])
     @idea.destroy
     flash.now[:success] = "Idea was successfully deleted."
     redirect_to root_path

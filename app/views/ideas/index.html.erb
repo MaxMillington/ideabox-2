@@ -1,26 +1,46 @@
 <%= link_to "Monkey", monkey_path %><br></br>
+<body class="monkey">
 
-<label>Search for Idea</label>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="monkey-title col-sm-8">
+      <h1>IdeaBox 2.0</h1>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <label class="individual-monkeys">Search for Idea</label>
+</div>
 
 <input type="text" class="form-control" placeholder="Search for Idea" id="idea_search"><br>
 
-<h1 class="new-idea-header"> Enter a New Idea:</h1>
-<%= render "form" %>
+<h1 class="new-idea-header individual-monkeys"> Enter a New Idea:</h1>
+<div class="form-group">
+  <%= render "form" %>
+</div>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="individual-monkeys col-sm-4">
+    <h3>Most Recent Ideas</h3>
+    <div class="ideas" id="latest-posts">
+      <% @ideas.each do |idea| %>
+          <div class="idea">
+            <h1 class="individual-monkeys"><%= idea.title %>:</h1>
+            <dl>
+              <h3 class="individual-monkeys quality">Quality: <%= idea.quality %></h3>
+              <h3 class="body individual-monkeys"><%= idea.body %></h3>
+              <%= link_to 'Thumbs Up', upvote_idea_path(idea), class: 'upvote individual-monkeys' %>
+              <%= link_to 'Thumbs Down', downvote_idea_path(idea), class: 'downvote individual-monkeys' %>
 
-<div class="ideas">
-  <% @ideas.each do |idea| %>
-      <div class="idea">
-        <h1><%= idea.title %>:</h1>
-        <dl>
-          <h3 class="quality">Quality: <%= idea.quality %></h3>
-          <h3 class="body"><%= idea.body %></h3>
-          <%= link_to 'Thumbs Up', upvote_idea_path(idea), class: 'upvote' %>
-          <%= link_to 'Thumbs Down', downvote_idea_path(idea), class: 'downvote' %>
+              <%= link_to "Edit", edit_idea_path(idea), class: 'edit individual-monkeys' %><br>
+              <%= link_to "Delete", idea_path(idea), method: 'delete', class: 'delete individual-monkeys' %><br>
+            </dl>
+          </div>
+      <% end %>
+    </div>
+  </div>
 
-          <%= link_to "Edit", edit_idea_path(idea), class: 'edit' %><br>
-          <%= link_to "Delete", idea_path(idea), method: 'delete', class: 'delete' %><br>
-        </dl>
-      </div>
-  <% end %>
+  <div class="col-sm-2"></div>
 </div>
 
+</body>

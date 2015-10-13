@@ -1,10 +1,10 @@
 .monkey {
-    background-color: #263248;
+    background-color: #0d4812;
     margin-bottom: 40px;
 }
 
 .monkey-title {
-    color: #FF9800;
+    color: #d546ff;
     font-size: 5em;
 }
 
@@ -22,9 +22,9 @@
 
 .btn-default:hover {
     background: none;
-    color: #FF9800;
+    color: #ff1b2f;
     border-width: 2px;
-    border-color: #FF9800;
+    border-color: #ff0a00;
 }
 
 input.form-control.post {

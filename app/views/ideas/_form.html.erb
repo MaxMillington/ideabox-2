@@ -2,11 +2,11 @@
 
   <%= form_for @idea do |f| %>
 
-      <%= f.label :title %>
-      <%= f.text_field :title, class: 'form-field', placeholder: "New Idea Title" %><br>
+      <%= f.label :title, class: 'individual-monkeys' %>
+      <%= f.text_field :title, class: 'form-control', id: 'post-description', placeholder: "New Idea Title" %><br>
 
-      <%= f.label :body %>
-      <%= f.text_area :body, class: 'form-field', placeholder: "New Idea body" %><br>
+      <%= f.label :body, class: 'individual-monkeys' %>
+      <%= f.text_area :body, class: 'form-control', id: 'post-description', placeholder: "New Idea body" %><br>
 
       <%= f.submit "Save", class: 'btn btn-primary' %>
   <% end %>
